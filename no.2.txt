@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num1,num2;
+    int sum,min,ji,shang,mod;
+    printf("Please input two integers：");
+    scanf("%d %d",&num1,&num2);
+    sum=num1+num2;
+    min=abs(num1-num2);
+    ji=num1*num2;
+    shang=num1/num2;
+    mod=num1%num2;
+    printf("sum=%d\tmin=%d\t\nji=%d\tshang=%d\nmod=%d\n",sum,min,ji,shang,mod);
+    return 0;
+}
