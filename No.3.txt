@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+
+int main()
+{
+    printf("Some secret in this systerm:\n");
+    printf("The space for char:%d\n",CHAR_BIT);
+    printf("The max char:%d\n",CHAR_MAX);
+    printf("The max integer:%d\n",INT_MAX);
+    printf("The min char:%d\n",CHAR_MIN);
+    printf("To find the store space for each variable:\n");
+    printf("INT:%d\tLONG:%d\tSHORT:%d\t\nDOUBLE:%-4dFLOAT:%d\tCHAR:%d\n",sizeof(int),sizeof(long),sizeof(short),sizeof(double),sizeof(float),sizeof(char));
+    return 0;
+}
