@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num,i,j,m,k;
+    printf("Hey guys, input a number you like:\n");
+    while(scanf("%d",&num))
+    {
+        for(i=1;i<=num+1;i++)
+        {
+            for(k=0;k<num+1-i;k++)
+            {
+                printf(" ");
+            }
+            for(j=1;j<=i*2-1;j++)
+            {
+                printf("*");
+            }
+            printf("\n");
+        }
+        for(m=num;m>0;m--)
+        {
+            for(k=0;k<=num-m;k++)
+            {
+                printf(" ");
+            }
+            for(j=1;j<=m*2-1;j++)
+            {
+                printf("*");
+            }
+            printf("\n");
+        }
+     printf("\nHey guys, input a number you like( input e to end):\n");
+    }
+    system("cls");
+    printf("\nHave a nice day!\n");
+    return 0;
+}
