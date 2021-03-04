@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 256
+
+int main()
+{
+    int a,b,c,count;
+    int arr[MAX];
+    printf("Hello! Please input the number you want to transform(input e to end):\n");
+    while(scanf("%d",&a))
+    {
+         printf("Binary or octal?(input 2 or 8):\n");
+         scanf("%d",&b);
+         for(count=0;a>=b;a=a/b,count++)
+         {
+             c=a%b;
+             arr[count]=c;
+         }
+         arr[count]=a;
+         printf("The result is:\n");
+         for(;count>=0;count--)
+         {
+             printf("%d",arr[count]);
+         }
+         printf("\n\nHello! Please input the number you want to transform(input e to end):\n");
+    }
+    printf("\nSee you :)");
+    return 0;
+}
