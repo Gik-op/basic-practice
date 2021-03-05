@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 256
+
+int main()
+{
+    int n,i,j,temp;
+    int arr[MAX];
+    printf("The number of the numbers that you'll input:\n");
+    scanf("%d",&n);
+    printf("Please input the number.\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(j=0;j<2;j++)
+    {
+        for(i=0;i<n-j;i++)
+        {
+            if(arr[i]>arr[i+1])
+            {
+                temp=arr[i];
+                arr[i]=arr[i+1];
+                arr[i+1]=temp;//Put the bigger one behind the smaller one
+            }
+        }
+    }
+    printf("The second biggest one is %d.\n",arr[n-2]);
+    return 0;
+}
