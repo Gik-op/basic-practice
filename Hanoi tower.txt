@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void Hanoi(int k,char a,char b,char c);
+void Move(int m,char from,char to);
+
+int main()
+{
+    int n;
+    printf("Hello world!\nThe solution of Hanoi tower:\n");
+    printf("Input the number of the plate:");
+    scanf("%d",&n);
+    Hanoi(n,'a','c','b');
+    return 0;
+}
+
+void Move(int m,char from,char to)
+{
+    printf("Move %d from %c to %c\n",m,from,to);
+}
+
+void Hanoi(int k,char a,char c,char b)//Move n plates from needle a to needle c using needle b
+{
+    if(k==1)
+    {
+        Move(k,a,c);
+    }
+    else
+    {
+        Hanoi (k-1,a,b,c);
+        Move(k,a,c);
+        Hanoi(k-1,b,c,a);
+    }
+}
