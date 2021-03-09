@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void Fibonacci(double first,double second,int label);
+
+int main()
+{
+    int ran;
+    printf("Hello world! \nInput a number ,I'll help you find the corresponding fibonacci number.\n");
+    scanf("%d",&ran);
+    Fibonacci(1,1,ran);
+    return 0;
+}
+
+void Fibonacci(double first,double second,int label)
+{
+    if(label==1)
+    {
+        printf("Hey!The number you want is %.f.\n",first);
+    }
+    else
+    {
+        Fibonacci(second,first+second,label-1);
+    }
+}
