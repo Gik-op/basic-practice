@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int input,minute,hour;
+    printf("Please input the number of minutes:");
+    scanf("%d",&input);
+    hour=input/60;
+    minute=input-hour*60;
+    printf("Hey,it's %d hours and %d minutes.\n",hour,minute);
+    return 0;
+}
