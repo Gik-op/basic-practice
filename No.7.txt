@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double num1,num2,num3,average;
+    printf("Please input three numbers:");
+    scanf("%lf %lf %lf",&num1,&num2,&num3);
+    average=(num1+num2+num3)/3.0;
+    printf("Average1 is %lf\n",average);
+    average*=10;
+    average+=0.5;
+    average=(int)average;
+    average/=10;
+    printf("Average2 is %lf\n",average);
+    return 0;
+}
