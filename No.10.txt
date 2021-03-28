@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int y0,m0,d0,y1,m1,d1,age;
+    printf("Hey! Tell me your birth date, and  date of today,I will tell you your age.\n");
+    printf("BIRTH DATE (year month day): ");
+    scanf("%d %d %d",&y0,&m0,&d0);
+    printf("CURRENT DATE(year month day):");
+    scanf("%d %d %d",&y1,&m1,&d1);
+    age=m1>m0||m1==m0&&d1>d0?y1-y0:y1-y0-1;
+    printf("Hey,your age is %d.\n",age);
+    return 0;
+}
