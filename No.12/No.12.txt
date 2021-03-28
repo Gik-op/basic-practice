@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double x,y;
+    int z;
+    printf("Input the value of x,and I will tell you the corresponding y.\n");
+    printf("Number x(-5--10):");
+    z=scanf("%lf",&x);
+    while(z==0||x<-5||x>10)
+    {
+        getchar();
+        printf("Wrong range! Input again!\n");
+        z=scanf("%lf",&x);
+    }
+    if(-5<x&&x<0) y=x;
+    if(x==0) y=x-1;
+    if(0<x&&x<10) y=x+1;
+    printf("Hey,y is %lf.\n",y);
+    return 0;
+}
