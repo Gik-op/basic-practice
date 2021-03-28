@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int y0,m0,d0;
+    printf("Input three numbers,and I will tell you the largest.\n");
+    printf("Number:");
+    scanf("%d %d %d",&y0,&m0,&d0);
+    y0=y0>m0?y0:m0;
+    y0=y0>d0?y0:d0;
+    printf("Hey,the largest is %d.\n",y0);
+    return 0;
+}
