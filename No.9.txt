@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int score;
+    char rank;
+    printf("Please input your score,I will tell you grade.\n");
+    scanf("%d",&score);
+    switch(score/10)
+    {
+       case 0:case 1:case 2:case 3:case 4:
+       case 5: rank='E';break;
+       case 6: rank='D';break;
+       case 7: rank='C';break;
+       case 8: rank='B';break;
+       default :rank='A';
+    }
+    printf("Hey! Your rank is: %c\n",rank);
+    return 0;
+}
