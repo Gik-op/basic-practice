@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SWAP(c) ({(65<=(int)c&&(int)c<=90)||((int)c>=97&&(int)c<=122)?1:0;})
+
+int main()
+{
+    char m;
+    int n;
+    printf("Please input a character:");
+    scanf("%c",&m);
+    n=SWAP(m);
+    printf("Hello, then the answer is %d\n",n);
+    return 0;
+}
